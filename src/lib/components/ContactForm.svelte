@@ -1,0 +1,46 @@
+<form id="contact-form">
+	<div class="form-group">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required />
+	</div>
+	<div class="form-group">
+		<label for="email">Email:</label>
+		<input type="email" id="email" name="email" required />
+	</div>
+	<div class="form-group">
+		<label for="message">Message:</label>
+		<textarea id="message" name="message" rows="4" required />
+	</div>
+	<button type="submit">Submit</button>
+</form>
+
+<style>
+	/* File path: public/styles.css */
+	.form-group {
+		margin-bottom: 1rem;
+	}
+
+	label {
+		display: inline-block;
+		width: 100px;
+		font-weight: bold;
+	}
+
+	input[type='text'],
+	input[type='email'],
+	textarea {
+		width: 100%;
+		padding: 0.5rem;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+	}
+
+	button {
+		padding: 0.5rem 1rem;
+		background-color: #007bff;
+		color: white;
+		border: none;
+		border-radius: 4px;
+		cursor: pointer;
+	}
+</style>
