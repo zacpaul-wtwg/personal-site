@@ -1,6 +1,9 @@
 <!-- src/routes/blog/+page.svelte -->
 <script>
 	import { slugify } from '$lib/utils';
+	/**
+	 * @type {{ posts: any; }}
+	 */
 	export let data;
 	let maxVisibleItems = 3;
 	$: loadedPosts = data.posts;
