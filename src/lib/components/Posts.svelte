@@ -3,7 +3,7 @@
 	import { slugify } from '$lib/utils';
 	export let data;
 	let maxVisibleItems = 3;
-	let loadedPosts = data.posts;
+	$: loadedPosts = data.posts;
 	$: limitedPosts = loadedPosts.slice(0, maxVisibleItems);
 	let nextIndex = maxVisibleItems;
 
@@ -22,7 +22,7 @@
 		{#each limitedPosts as post}
 			<div class="card">
 				<h3>
-					<a href="posts/{post.path}/{slugify(post.meta.title)}">
+					<a href="/posts/{post.path}/{slugify(post.meta.title)}">
 						{post.meta.title}
 					</a>
 				</h3>
