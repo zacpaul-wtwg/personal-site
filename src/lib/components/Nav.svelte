@@ -4,10 +4,10 @@
 	};
 
 	const navItems = [
-		item('Posts', '#posts'),
-		item('Resume', '#resume'),
-		item('Hobbies', '#hobbies'),
-		item('Contact', '#contact')
+		item('Posts', '/#posts'),
+		item('Resume', '/#resume'),
+		item('Hobbies', '/#hobbies'),
+		item('Contact', '/#contact')
 	];
 </script>
 

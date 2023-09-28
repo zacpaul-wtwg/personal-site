@@ -13,8 +13,11 @@
 <header bind:this={header}>
 	<Nav />
 </header>
-
-<slot />
+<div class="container-main">
+	<div class="container">
+		<slot />
+	</div>
+</div>
 
 <style>
 	header {
@@ -25,5 +28,12 @@
 		display: block;
 		padding: 1px;
 		background-color: white;
+	}
+	.container-main {
+		display: flex;
+		justify-content: center;
+	}
+	.container {
+		max-width: 900px;
 	}
 </style>

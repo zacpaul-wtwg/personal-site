@@ -1,6 +1,13 @@
 <!-- src/routes/[slug]/+page.svelte -->
 <script>
+	import { onMount } from 'svelte';
+	import Prism from 'prismjs';
+
+	import 'prismjs/plugins/line-numbers/prism-line-numbers.js';
 	export let data;
+	onMount(() => {
+		Prism.highlightAll();
+	});
 </script>
 
 <article>
@@ -11,5 +18,11 @@
 			{tag}&nbsp;
 		{/each}
 	</p>
-	<svelte:component this={data.content} />
+	<div class="markdown-posts line-numbers">
+		<svelte:component this={data.content} />
+	</div>
 </article>
+
+<style scoped>
+	@import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+</style>
