@@ -2,20 +2,16 @@
 	import Nav from '$lib/components/Nav.svelte';
 	import { headerHeight } from '../stores';
 	import '../app.css';
-
-	let header;
-
-	$: if (header) {
-		headerHeight.set(header.offsetHeight);
-	}
 </script>
 
-<header bind:this={header}>
+<header>
 	<Nav />
 </header>
-<div class="container-main">
-	<div class="container">
-		<slot />
+<div class="container">
+	<div class="content">
+		<div class="width">
+			<slot />
+		</div>
 	</div>
 </div>
 
@@ -29,11 +25,29 @@
 		padding: 1px;
 		background-color: white;
 	}
-	.container-main {
+
+	.container {
 		display: flex;
 		justify-content: center;
 	}
-	.container {
-		max-width: 900px;
+	/* File path: /path/to/your/styles.css */
+
+	.content {
+		max-width: 60vw;
+
+		/* First breakpoint: max-width changes to 80vw when the viewport is under 1200px */
+		@media (max-width: 1200px) {
+			max-width: 80vw;
+		}
+
+		/* Second breakpoint: max-width changes to 90vw when the viewport is under 900px */
+		@media (max-width: 900px) {
+			max-width: 90vw;
+		}
+
+		/* Third breakpoint: max-width changes to 100vw when the viewport is under 600px */
+		@media (max-width: 600px) {
+			max-width: 100vw;
+		}
 	}
 </style>
