@@ -7,6 +7,21 @@
 	export let data;
 	onMount(() => {
 		Prism.highlightAll();
+		const pElements = document.querySelectorAll('p');
+
+		pElements.forEach((p) => {
+			const text = p.innerText;
+			if (text.toLowerCase().startsWith('create')) {
+				p.innerText = `🌱 ${text}`;
+			}
+		});
+
+		pElements.forEach((p) => {
+			const text = p.innerText;
+			if (text.toLowerCase().startsWith('update')) {
+				p.innerText = `✏️ ${text}`;
+			}
+		});
 	});
 </script>
 
@@ -25,4 +40,16 @@
 
 <style>
 	@import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+	:global(body) {
+		& h2::after {
+			content: '';
+			display: block;
+			height: 1px;
+			width: 100%;
+			margin-top: 8px;
+		}
+	}
+	article {
+		padding-top: 50px;
+	}
 </style>

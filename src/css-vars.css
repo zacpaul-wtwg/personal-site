@@ -1,6 +1,11 @@
-/* css color variables */
-
 :root {
-	--black: #0a0a0a;
-	--light-grey: #dbdbdb;
+	--white: #ffffff;
+	--main: #4458b3;
+	--main-dark: #333650;
+	--main-dark-extra: #15161f;
+	--main-light: #a9aabc;
+	--main-light-extra: #dadbe9;
+	--accent-light: #87fcf6;
+	--accent-dark: #5a1d31;
+	--dark-extra: #15161f;
 }

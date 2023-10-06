@@ -6,7 +6,7 @@
 	export let data;
 </script>
 
-<Section navId={'posts'} style="margin-top: -{$headerHeight}px;">
+<Section navId={'posts'}>
 	<Posts {data} />
 </Section>
 

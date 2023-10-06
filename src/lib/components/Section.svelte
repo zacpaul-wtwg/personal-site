@@ -6,9 +6,9 @@
 	export let navId;
 </script>
 
-<div class="container" id={navId}>
+<section class="container" id={navId}>
 	<slot />
-</div>
+</section>
 
 <style>
 	/* styles.css */
